@@ -9,7 +9,7 @@ interface PlaceCardProps {
   title: string;
   price: string;
   rating: number;
-  onLoad: () => void; // callback to notify parent image loaded
+  onLoad?: () => void;
 }
 
 const PlaceCard: FC<PlaceCardProps> = ({
@@ -69,7 +69,7 @@ const PlaceCard: FC<PlaceCardProps> = ({
           alt={title}
           className="w-full h-full object-cover"
           loading="lazy"
-          onLoad={onLoad} // notify parent
+          onLoad={onLoad} 
         />
       </div>
 

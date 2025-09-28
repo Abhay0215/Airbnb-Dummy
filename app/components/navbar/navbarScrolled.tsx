@@ -10,7 +10,7 @@ import { openPopup, closePopup } from '../../redux/slices/loginmodal/loginmodal'
 
 type NavbarProps = {
   scrolled: boolean;
-  // onAuthTrigger: (login: boolean) => void;
+  onAuthTrigger: (login: boolean) => void;
 };
 
 function NavbarScroll({ scrolled }: NavbarProps) {

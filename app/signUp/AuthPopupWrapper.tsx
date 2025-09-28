@@ -6,6 +6,10 @@ import PasswordVerify from "../pages/googleOtp/page"
 import RegisterModal from "../pages/registerModal/page"
 // import MyProfile from "../profile/page"
 
+type NavbarProps = {
+  onAuthTrigger: (login: boolean) => void;
+};
+
 export default function AuthPopupWrapper({ children }: { children: React.ReactNode }) {
   const [isAuthOpen, setAuthOpen] = useState(false);
   const [isLogin, setIsLogin] = useState(true);

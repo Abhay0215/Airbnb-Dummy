@@ -11,6 +11,7 @@ interface ExperienceData {
   price: string;
   rating: number;
   location: string;
+  onLoad?: () => void;
 }
 
 interface ExperienceScrollSectionProps {

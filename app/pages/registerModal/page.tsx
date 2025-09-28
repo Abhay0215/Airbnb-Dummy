@@ -39,7 +39,7 @@ export default function RegisterModal() {
     setError(null);
 
     try {
-      const resultAction = await dispatch(registerUser({ fullname, email, password }));
+      const resultAction = await dispatch(registerUser({ fullname, email, password })).unwrap();;
       console.log("resultofregister",resultAction );
       
       if (resultAction?.success) {
@@ -49,7 +49,7 @@ export default function RegisterModal() {
           dispatch(closePopupRegister());
         }, 2000);
       } else {
-        setError(resultAction.payload || 'Registration failed');
+        setError(resultAction.message || 'Registration failed');
       }
     } catch (err) {
       setError('Something went wrong');

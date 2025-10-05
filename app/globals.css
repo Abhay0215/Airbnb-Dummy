@@ -4,6 +4,24 @@
   --background: #ffffff;
   --foreground: #171717;
 }
+/* Prevent browser dark mode overrides */
+:root {
+  color-scheme: light;
+}
+
+/* Force all backgrounds and text to your light theme */
+html, body {
+  background-color: #ffffff !important;
+  color: #000000 !important;
+}
+
+/* Optional – reset all elements that might flip in dark mode */
+*, *::before, *::after {
+  background-color: inherit;
+  color: inherit;
+}
+
+
 
 @theme inline {
   --color-background: var(--background);
@@ -12,12 +30,12 @@
   --font-mono: var(--font-geist-mono);
 }
 
-@media (prefers-color-scheme: dark) {
+/* @media (prefers-color-scheme: dark) {
   :root {
     --background: #0a0a0a;
     --foreground: #ededed;
   }
-}
+} */
 
 body {
   background: var(--background);

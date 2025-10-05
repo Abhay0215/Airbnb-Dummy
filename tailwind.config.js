@@ -15,3 +15,8 @@ export default {
     },
   },
 };
+
+module.exports = {
+  darkMode: false
+}
+
